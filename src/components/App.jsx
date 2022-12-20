@@ -10,7 +10,7 @@ export const App = () =>  {
   const [neutral, setNeutral] = useState(0); 
   const [bad, setBad] = useState(0); 
 
-  const options = ["good", "neutral", "bad"]; 
+ 
   
   const feedbackHandler = (type) => {
     switch (type) {
@@ -45,7 +45,8 @@ export const App = () =>  {
     setBad(0);
   }
     const totalFeedbackCount = totalFeedback();
-    const positiveFeedbackCount = positiveFeedbackPercentage();
+  const positiveFeedbackCount = positiveFeedbackPercentage();
+  const options = Object.keys({ good, neutral, bad });
     return (
          <>
       <Section title='Please leave feedback'>
